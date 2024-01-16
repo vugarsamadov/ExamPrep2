@@ -1,0 +1,29 @@
+﻿@model PortfolioUpdateVM
+
+
+
+<form asp-action="Update" method="post" enctype="multipart/form-data">
+
+    @Html.ValidationSummary();
+
+    <div class="form-group">
+        <label asp-for="Title"></label>
+        <input asp-for="Title" class="form-control">
+        <span style="color:red" asp-validation-for="Title"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Description"></label>
+        <input asp-for="Description" class="form-control">
+        <span style="color:red" asp-validation-for="Description"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Image"></label>
+        <input asp-for="Image" class="form-control">
+        <span style="color:red" asp-validation-for="Image"></span>
+    </div>
+
+
+    <button class="btn btn-success" type="submit">Update</button>
+</form>
